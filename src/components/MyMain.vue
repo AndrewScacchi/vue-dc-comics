@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h2>MyMain</h2>
+  <div id="main">
+    <h2> ..Content goes here.. </h2>
   </div>
 </template>
 
@@ -15,5 +15,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-
+  #main {
+    background-color: black;
+    padding: 15px 15%;
+  }
+  h2 {
+    color: white;
+  }
 </style>

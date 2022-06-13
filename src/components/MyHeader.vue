@@ -2,7 +2,9 @@
     <div id="header">
       <!-- logo -->
       <div>
-        <img src="../assets/img/dc-logo.png" alt="logo">
+        <a href="#">
+          <img src="../assets/img/dc-logo.png" alt="logo">
+        </a>
       </div>
 
       <!-- nav -->
@@ -34,18 +36,20 @@ export default {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10%;
-    padding-right: 10%;
+    
+    padding: 0px 15%;
     }
-    a {
+    nav a {
+      display: inline-block;
       text-decoration: none;
       color: #303030;
       margin-right: 10px;
+      height: 150px;
+      line-height: 150px;
     }
-    a:hover {
+    nav a:hover {
         color: #0282f9;
+        border-bottom: 5px solid #0282f9;
     }
     
   
