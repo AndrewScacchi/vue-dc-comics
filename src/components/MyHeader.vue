@@ -32,6 +32,11 @@ export default {
 
 <style scoped lang="css">
   #header {
+    z-index: 10;
+    top: 0;
+    background-color: white;
+    position: sticky;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
