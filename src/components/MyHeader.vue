@@ -2,7 +2,7 @@
     <div id="header">
       <!-- logo -->
       <div>
-        <a href="#">
+        <a href="#" class="logo-main">
           <img src="../assets/img/dc-logo.png" alt="logo">
         </a>
       </div>
@@ -44,13 +44,16 @@ export default {
     
     padding: 0px 15%;
     }
+    .logo-main img {
+      height: 75px;
+    }
     nav a {
       display: inline-block;
       text-decoration: none;
       color: #303030;
       margin-right: 10px;
-      height: 150px;
-      line-height: 150px;
+      height: 100px;
+      line-height: 100px;
     }
     nav a:hover {
         color: #0282f9;
