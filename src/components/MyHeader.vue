@@ -26,11 +26,12 @@
 
 <script>
 export default {
-  name: 'MyHeader'
+  name: 'MyHeader',
+
 }
 </script>
 
-<style scoped lang="css">
+<style scoped lang="scss">
   #header {
     z-index: 10;
     top: 0;

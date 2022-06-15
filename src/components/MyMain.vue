@@ -16,7 +16,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
   #main {
-    /* margin-top: 150px; */
     background-color: black;
     padding: 15px 15%;
     min-height: 50px;

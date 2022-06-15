@@ -1,11 +1,11 @@
 <template>
     <div id="footer">
       <div id="blue-bar">
-        <div class="icons">
-          <img src="../../src/assets/img/buy-comics-digital-comics.png" alt=""> 
-          <p>DIGITAL COMICS</p>
+        <div v-for="(promo, i) in promos" :key="i" class="icons">
+          <img :src="promo.img" alt=""> 
+          <p>{{promo.text}}</p>
         </div>
-        <div class="icons">
+        <!-- <div class="icons">
           <img src="../../src/assets/img/buy-comics-merchandise.png" alt=""> 
           <p>DC MERCHANDISE</p>
         </div>
@@ -20,7 +20,7 @@
         <div class="icons">
           <img src="../../src/assets/img/buy-dc-power-visa.svg" alt=""> 
           <p>DC POWER VISA</p>
-        </div>
+        </div> -->
 
       </div>
       <div id="footer-main">
@@ -93,10 +93,37 @@
 <script>
 export default {
   name: 'MyFooter',
+
+  data(){
+    return{
+      promos: [
+        {
+          text: "DIGITAL COMICS",
+          img: require("../assets/img/buy-comics-digital-comics.png"),
+        },
+        {
+          text: "DC MERCHANDISE",
+          img: require("../assets/img/buy-comics-merchandise.png"),
+        }, 
+        {
+          text: "SUBSCRIPTION",
+          img: require("../assets/img/buy-comics-subscriptions.png"),
+        }, 
+        {
+          text: "COMIC SHOP LOCATOR",
+          img: require("../assets/img/buy-comics-shop-locator.png"),
+        }, 
+        {
+          text: "DC POWER VISA",
+          img: require("../assets/img/buy-dc-power-visa.svg"),
+        },
+      ]
+    }
+  }
 }
 </script>
 
-<style scoped lang="css">
+<style scoped lang="scss">
   #blue-bar {
     display:flex;
     flex-direction: row;
@@ -108,26 +135,26 @@ export default {
     padding: 15px 15%;
     color: white;
 
-  }
-  #blue-bar .icons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5px;
-    font-size: 0.8em;
-    min-width: 150px;
+      .icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        font-size: 0.8em;
+        min-width: 150px;
+      }
+      img {
+        max-height: 40px;
+        max-width: 40px;
+      }
+
+
   }
   .icons:hover {
     cursor: pointer;
     font-size: 1.05em;
     transform: scale(105%);
   }
-  #blue-bar img {
-    max-height: 40px;
-    max-width: 40px;
-  }
-
-
 
   #footer{
     background: url(../assets/img/dc-logo-bg.png),
@@ -149,19 +176,20 @@ export default {
     flex-wrap: wrap;
     padding: 15px 15%;
     height: 250px;
-    width: 50%
+    width: 50%;
+    ul li{
+      list-style: none;
+      font-size: 0.65em;
+      font-weight: lighter;
+    }
+    .li-title {
+      font-weight: bold;
+      font-size:1em;
+      padding: 0.5em 0;
+    }
+  
   }
   
-  #footer-main ul li{
-    list-style: none;
-    font-size: 0.65em;
-    font-weight: lighter;
-  }
-  #footer-main .li-title {
-    font-weight: bold;
-    font-size:1em;
-    padding: 0.5em 0;
-  }
   #footer-bottom {
     margin-top: auto;
     background-color: #303030;
@@ -171,19 +199,20 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  #footer-bottom div {
-    color: #0282f9;
+    div {
+      color: #0282f9;
+    }
+  
   }
   #footer-social {
     display: flex;
     align-items: center;
     gap: 10px;
-  }
-  #footer-social a {
-    display: inline-block;
-    margin: 5px;
-    width: 25px;
+    a {
+      display: inline-block;
+      margin: 5px;
+      width: 25px;
+    }
   }
   .btn{
     border: 1px solid #0282f9;
@@ -191,10 +220,12 @@ export default {
     color: white;
     padding: 0.5em;
     font-size: 0.9em;
+   
+    &:hover {
+      border-color: white;
+      background-color: #0282f9;
+      cursor: pointer;
+    }  
   }
-  .btn:hover {
-    border-color: white;
-    background-color: #0282f9;
-    cursor: pointer;
-  }
+  
 </style>
